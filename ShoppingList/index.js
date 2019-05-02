@@ -33,8 +33,16 @@ function takeSubmit(){
 })};
 
 function checkFood(){
-    $('.shopping-item-toggle').click(event => {
-
-        })
+    $('ul').on('click', '.shopping-item-toggle', function() {
+        $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
+        });
     }
-$(takeSubmit);
+    
+function deleteFood() {
+    $('ul').on('click', '.shopping-item-delete', function() {
+        $(this).closest('li').find('.shopping-item').remove();
+    });
+}
+$(takeSubmit)
+$(checkFood);
+$(deleteFood);
