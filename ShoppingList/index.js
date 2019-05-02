@@ -40,7 +40,7 @@ function checkFood(){
     
 function deleteFood() {
     $('ul').on('click', '.shopping-item-delete', function() {
-        $(this).closest('li').find('.shopping-item').remove();
+        $(this).closest('li').find('.shopping-item').parent().remove();
     });
 }
 $(takeSubmit)
