@@ -14,7 +14,7 @@ function takeSubmit(){
     console.log("takeSubmit");
     $('#js-shopping-list-form').submit(event => {
         event.preventDefault();
-        let entry = $('#shopping-list-entry').val();
+        let entry = $(event.currentTarget).find('#shopping-list-entry').val();
         $('#shopping-list-entry').val('');
         $('.shopping-list').append(`
          <li>
