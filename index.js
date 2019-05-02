@@ -1,11 +1,10 @@
-function doIt() {
-    const toDos = $('.js-to-dos');
-    // this will grab the first parent of toDos that has the `.js-parent-demo`
-    // class
-    toDos.parent('.js-parent-demo').removeClass('hidden');
-    // this will look at all children of toDos that have the `.js-complete class`
-    toDos.find('.js-complete').addClass('complete');
-  }
-  
-  doIt();
+$('.thumbnail').on('click', e => {
+    const clickedEl = $(e.target);
+    const heroImgEl = $('.hero').find('img');
+
+    const src = clickedEl.attr('src');
+    const alt = clickedEl.attr('alt');
+    heroImgEl.attr('src', src);
+    heroImgEl.attr('alt', alt);
+  });
   
